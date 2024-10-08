@@ -30,6 +30,6 @@ public class LoginController {
 
     @FXML
     private void OnActionInscription() {
-        StartApplication.changeScene("accueil/inscriptionView", "Inscription");
+        StartApplication.changeScene("InscriptionView", "Inscription");
     }
 }

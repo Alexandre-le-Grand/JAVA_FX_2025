@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="483.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.accueil.InscriptionView">
+<AnchorPane prefHeight="483.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.accueil.InscriptionView">
    <children>
-      <Text layoutX="244.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSCRIPTION" />
+      <Text layoutX="244.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inscription" />
       <Text layoutX="266.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" />
       <TextField fx:id="txtNom" layoutX="204.0" layoutY="89.0" />
       <Text layoutX="258.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom" />

@@ -13,19 +13,20 @@ public class StartApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         mainStage = stage;
+        // Load the initial login view
         FXMLLoader fxmlLoader = new FXMLLoader(StartApplication.class.getResource("accueil/loginView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        mainStage.setTitle("Hello!");
+        Scene scene = new Scene(fxmlLoader.load(), 320, 400);
+        mainStage.setTitle("Bonjour");
         mainStage.setScene(scene);
         mainStage.show();
     }
 
     public static void changeScene(String fxml, String nomScene) {
-        mainStage.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(StartApplication.class.getResource(fxml + ".fxml"));
-        Scene scene = null;
         try {
-            scene = new Scene(fxmlLoader.load());
+            // Load the new FXML scene
+            FXMLLoader fxmlLoader = new FXMLLoader(StartApplication.class.getResource("accueil/" + fxml + ".fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
             mainStage.setTitle(nomScene);
             mainStage.setScene(scene);
             mainStage.show();
