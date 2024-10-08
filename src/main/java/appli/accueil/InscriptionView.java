@@ -54,6 +54,6 @@ public class InscriptionView {
 
     @FXML
     void OnActionRetour(ActionEvent event) {
-        StartApplication.changeScene("accueil/loginView", "Connexion");
+        StartApplication.changeScene("loginView", "Connexion");
     }
 }
