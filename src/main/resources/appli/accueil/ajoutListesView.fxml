@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="appli.accueil.AjoutListesController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- Label for List Name -->
+    <Label text="Nom de la liste" layoutX="50.0" layoutY="50.0"/>
+
+    <!-- TextField for entering List Name -->
+    <TextField fx:id="nomListeField" layoutX="200.0" layoutY="50.0" promptText="Entrez le nom de la liste"/>
+
+    <!-- Submit Button -->
+    <Button text="Ajouter Liste" layoutX="200.0" layoutY="100.0" onAction="#ajouterListe"/>
+
+</AnchorPane>

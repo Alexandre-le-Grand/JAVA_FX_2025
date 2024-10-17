@@ -2,7 +2,9 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -11,7 +13,30 @@
       <Button fx:id="AjouterListe" layoutX="43.0" layoutY="278.0" mnemonicParsing="false" onAction="#OnActionAjoutListe" text="Ajouter une liste" />
       <Button fx:id="types" layoutX="43.0" layoutY="309.0" mnemonicParsing="false" onAction="#OnActionTypes" prefHeight="25.0" prefWidth="103.0" text="Les types" />
       <Button fx:id="deconnexion" layoutX="43.0" layoutY="341.0" mnemonicParsing="false" onAction="#OnActionDeconnexion" prefHeight="25.0" prefWidth="103.0" text="Déconnexion" />
-      <TableView fx:id="colonne" layoutX="228.0" layoutY="88.0" prefHeight="313.0" prefWidth="372.0" />
+
+      <TableView fx:id="colonne" layoutX="228.0" layoutY="88.0" prefHeight="313.0" prefWidth="372.0">
+         <!-- Colonne ID -->
+         <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="100.0">
+               <cellValueFactory>
+                  <PropertyValueFactory property="idListe"/>
+               </cellValueFactory>
+            </TableColumn>
+            <!-- Colonne Nom -->
+            <TableColumn fx:id="nomColumn" text="Nom" prefWidth="150.0">
+               <cellValueFactory>
+                  <PropertyValueFactory property="nom"/>
+               </cellValueFactory>
+            </TableColumn>
+            <!-- Colonne Date de Création -->
+            <TableColumn fx:id="dateColumn" text="Date de Création" prefWidth="120.0">
+               <cellValueFactory>
+                  <PropertyValueFactory property="dateCreation"/>
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+
       <Label layoutX="23.0" layoutY="21.0" prefHeight="50.0" prefWidth="179.0" text="Bienvenue !">
          <font>
             <Font size="32.0" />

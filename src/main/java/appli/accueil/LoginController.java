@@ -1,7 +1,7 @@
 package appli.accueil;
 
 import appli.StartApplication;
-import appli.database.Database;
+import appli.Database.Database;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -29,7 +29,7 @@ public class LoginController {
         String mdp = txtMdp.getText();
 
         if (verifierUtilisateur(email, mdp)) {
-            StartApplication.changeScene("AccueilView", "Accueil");
+            StartApplication.changeScene("acceuilView", "Acceuil");
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Erreur de Connexion");
@@ -54,15 +54,16 @@ public class LoginController {
         Connection connection = database.getConnexion();
 
         if (connection != null) {
-            String query = "SELECT * FROM utilisateurs WHERE email = ? AND mot_de_passe = ?";
+            String query = "SELECT * FROM utilisateur WHERE email = ? AND mdp = ?;";
             try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
                 preparedStatement.setString(1, email);
                 preparedStatement.setString(2, mdp);
-                ResultSet resultSet = preparedStatement.executeQuery();
+                ResultSet rep = preparedStatement.executeQuery();
 
-                if (resultSet.next()) {
+                if (rep.next()) {
                     return true;
                 }
+
 
             } catch (SQLException e) {
                 e.printStackTrace();

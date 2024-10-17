@@ -1,6 +1,6 @@
 package appli.model.repository;
 
-import appli.database.Database;
+import appli.Database.Database;
 import appli.model.Utilisateur;
 
 import java.sql.Connection;
