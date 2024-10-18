@@ -7,6 +7,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import appli.Database.Database;
+import appli.StartApplication;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
@@ -57,6 +59,10 @@ public class AjoutListesController {
 
             nomListeField.clear();
         }
+    }
+
+    public void retour(ActionEvent actionEvent) {
+        StartApplication.changeScene("acceuilView", "Accueil");
     }
 }
 
