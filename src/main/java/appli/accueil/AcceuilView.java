@@ -21,6 +21,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 public class AcceuilView {
 
+    public TableColumn modifierColumn;
     @FXML
     private ResourceBundle resources;
 
@@ -76,6 +77,9 @@ public class AcceuilView {
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("dateCreation"));
 
         chargerListe();
+    }
+
+    private void modifierListe(Liste liste) {
     }
 
     private void chargerListe() {

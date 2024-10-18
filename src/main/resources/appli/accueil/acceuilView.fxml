@@ -8,32 +8,33 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.accueil.AcceuilView">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.accueil.AcceuilView">
    <children>
       <Button fx:id="AjouterListe" layoutX="43.0" layoutY="278.0" mnemonicParsing="false" onAction="#OnActionAjoutListe" text="Ajouter une liste" />
       <Button fx:id="types" layoutX="43.0" layoutY="309.0" mnemonicParsing="false" onAction="#OnActionTypes" prefHeight="25.0" prefWidth="103.0" text="Les types" />
       <Button fx:id="deconnexion" layoutX="43.0" layoutY="341.0" mnemonicParsing="false" onAction="#OnActionDeconnexion" prefHeight="25.0" prefWidth="103.0" text="Déconnexion" />
 
-      <TableView fx:id="colonne" layoutX="228.0" layoutY="88.0" prefHeight="313.0" prefWidth="372.0">
+      <TableView fx:id="colonne" layoutX="196.0" layoutY="88.0" prefHeight="313.0" prefWidth="471.0">
          <!-- Colonne ID -->
          <columns>
-            <TableColumn fx:id="idColumn" text="ID" prefWidth="100.0">
+            <TableColumn fx:id="idColumn" prefWidth="100.0" text="ID">
                <cellValueFactory>
-                  <PropertyValueFactory property="idListe"/>
+                  <PropertyValueFactory property="idListe" />
                </cellValueFactory>
             </TableColumn>
             <!-- Colonne Nom -->
-            <TableColumn fx:id="nomColumn" text="Nom" prefWidth="150.0">
+            <TableColumn fx:id="nomColumn" prefWidth="150.0" text="Nom">
                <cellValueFactory>
-                  <PropertyValueFactory property="nom"/>
+                  <PropertyValueFactory property="nom" />
                </cellValueFactory>
             </TableColumn>
             <!-- Colonne Date de Création -->
-            <TableColumn fx:id="dateColumn" text="Date de Création" prefWidth="120.0">
+            <TableColumn fx:id="dateColumn" prefWidth="120.0" text="Date de Création">
                <cellValueFactory>
-                  <PropertyValueFactory property="dateCreation"/>
+                  <PropertyValueFactory property="dateCreation" />
                </cellValueFactory>
             </TableColumn>
+            <TableColumn fx:id="modifierColumn" prefWidth="100.0" text="Modifier" />
          </columns>
       </TableView>
 
